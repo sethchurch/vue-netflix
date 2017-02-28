@@ -4,12 +4,14 @@
     background-color: #cff;
     position: relative;
     overflow: hidden;
-    margin: 0 5px;
+    margin: 0 4px;
     flex-shrink: 1;
+    width: 400px;
+    background-color: #050505;
     &:hover {
         transform: scale(1.2) translate3d(28px, 0, 0);
         &~.filmCard {
-            transform: translate3d(67px, 0, 0);
+            transform: translate3d(65px, 0, 0);
         }
     }
     &:hover>.content {
@@ -23,6 +25,7 @@
         transition: 0.75s;
         display: block;
         filter: brightness(50%);
+        margin: 0 auto;
     }
     .content {
         flex-shrink: 1;
@@ -75,6 +78,9 @@
                 background-color: #f00;
                 color: #444;
                 border: 1px solid #f00;
+            }
+            &:focus {
+                outline: 0;
             }
         }
     }
