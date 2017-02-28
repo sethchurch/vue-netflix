@@ -1,0 +1,17 @@
+.category {
+    width: 98%;
+    text-align: left;
+    h1 {
+        margin-left: 0;
+        color: #cfcfcf;
+    }
+    .show-list {
+        width: 100%;
+        transition: 0.5s ease;
+        display: flex;
+        justify-content: space-around;
+        &:hover {
+            transform: translate3d(-28px, 0, 0);
+        }
+    }
+}

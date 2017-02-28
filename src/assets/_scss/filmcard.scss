@@ -1,0 +1,81 @@
+.filmCard {
+    transition: 0.5s ease;
+    display: flex;
+    background-color: #cff;
+    position: relative;
+    overflow: hidden;
+    margin: 0 5px;
+    flex-shrink: 1;
+    &:hover {
+        transform: scale(1.2) translate3d(28px, 0, 0);
+        &~.filmCard {
+            transform: translate3d(67px, 0, 0);
+        }
+    }
+    &:hover>.content {
+        opacity: 1;
+    }
+    &:hover>img {
+        filter: brightness(70%);
+        transform: scale(1.3);
+    }
+    img {
+        transition: 0.75s;
+        display: block;
+        filter: brightness(50%);
+    }
+    .content {
+        flex-shrink: 1;
+        transition: 0.8s ease;
+        display: flex;
+        color: #f1f1f1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: row-reverse;
+        padding: 0 10px;
+        opacity: 0;
+        h3 {
+            margin: 5px 0;
+            font-weight: 100;
+            font-size: 1.5em;
+            &.smaller {
+                font-size: 1.3em;
+            }
+        }
+        .show-desc {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            justify-content: space-around;
+            p {
+                margin: 0;
+            }
+        }
+        button {
+            position: relative;
+            top: 8%;
+            right: 3%;
+            flex-shrink: 0;
+            transition: 0.1s;
+            font-weight: bold;
+            font-size: 1.4em;
+            width: 2em;
+            height: 2em;
+            border-radius: 100%;
+            color: #f1f1f1;
+            background-color: transparent;
+            border: 1px solid #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.favorited {
+                background-color: #f00;
+                color: #444;
+                border: 1px solid #f00;
+            }
+        }
+    }
+}
