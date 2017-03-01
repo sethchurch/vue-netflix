@@ -1,17 +1,23 @@
 .category {
-    width: 98%;
+    width: 100%;
     text-align: left;
     h1 {
+        font-weight: 500;
         margin-left: 0;
-        color: #9B9B9B;
+        margin-bottom: 5px;
+        color: #ccc;
     }
     .show-list {
         width: 100%;
         transition: 0.5s ease;
         display: flex;
         justify-content: space-around;
+        margin-bottom: 1em;
         &:hover {
-            transform: translate3d(-28px, 0, 0);
+            transform: translate3d(-18px, 0, 0);
+            .film-card {
+                filter: brightness(40%);
+            }
         }
     }
 }

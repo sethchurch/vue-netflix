@@ -4,28 +4,33 @@
     background-color: #cff;
     position: relative;
     overflow: hidden;
-    margin: 0 4px;
+    margin: 0 3px;
     flex-shrink: 1;
     width: 400px;
+    height: 170px;
     background-color: #050505;
     &:hover {
-        transform: scale(1.2) translate3d(28px, 0, 0);
+        filter: brightness(90%) !important;
+        transform: scale(1.15) translate3d(18px, 0, 0);
         &~.filmCard {
-            transform: translate3d(65px, 0, 0);
+            transform: translate3d(40px, 0, 0) scale(0.98);
+            img {
+                filter: brightness(40%);
+            }
         }
     }
     &:hover>.content {
         opacity: 1;
     }
     &:hover>img {
-        filter: brightness(70%);
         transform: scale(1.3);
     }
     img {
         transition: 0.75s;
         display: block;
-        filter: brightness(50%);
+        filter: brightness(60%);
         margin: 0 auto;
+        width: 100%;
     }
     .content {
         flex-shrink: 1;
@@ -40,6 +45,7 @@
         flex-direction: row-reverse;
         padding: 0 10px;
         opacity: 0;
+        text-shadow: 0 0 5px #000;
         h3 {
             margin: 5px 0;
             font-weight: 100;

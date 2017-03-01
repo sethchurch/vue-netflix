@@ -3,6 +3,7 @@
      <h1> {{ title }} </h1>
      <div class="show-list">
         <FilmCard 
+        class="film-card"
         v-for="movie in category_data.value.results.slice(0,6)" 
         :show="movie"
         :key="movie.id"

@@ -1,0 +1,19 @@
+.header {
+    position: relative;
+    height: 80vh;
+    &__show-name {
+        position: absolute;
+        z-index: 99;
+        top: 10vh;
+        left: 3vw;
+        img {
+            width: 500px;
+        }
+    }
+    &>img {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
+}

@@ -3,11 +3,13 @@
 *::after,
 {
     box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 body {
-    background-color: #141316;
+    background-color: #000000;
+    padding: 0;
+    margin: 0;
 }
 
 #app {
@@ -16,14 +18,25 @@ body {
     -moz-osx-font-smoothing: grayscale;
     text-align: center;
     color: #141316;
-    margin-top: 60px;
-    overflow: hidden;
+    margin: 0;
+    height: auto;
 }
 
-.catagories {
+header {
+    margin-bottom: -250px;
+}
+
+.categories {
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
+    .category {
+        &:last-child {
+            margin-bottom: 50px;
+        }
+    }
 }
