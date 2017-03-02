@@ -1,18 +1,40 @@
 .header {
     position: relative;
     height: 80vh;
+    background-image: url("../assets/header-bg-2.png");
+    background-size: cover;
+    margin-bottom: -200px;
     &__show-name {
         position: absolute;
+        display: flex;
+        flex-direction: column;
         z-index: 99;
-        top: 10vh;
+        top: 5vh;
         left: 3vw;
+        text-align: left;
+        color: white;
+        p {
+            width: 50%;
+            font-weight: 100;
+        }
+        h3 {
+            font-size: 1.5em;
+        }
+        h2 {
+            font-weight: 100;
+            align-self: flex-start;
+            span {
+                font-weight: bold;
+            }
+        }
         img {
+            margin: 0;
             width: 500px;
         }
     }
     &>img {
-        position: absolute;
-        height: 100%;
+        width: 70%;
+        position: fixed;
         top: 0;
         right: 0;
     }

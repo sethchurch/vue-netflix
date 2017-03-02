@@ -29,7 +29,7 @@
         transition: 0.75s;
         display: block;
         filter: brightness(60%);
-        margin: 0 auto;
+        margin: auto;
         width: 100%;
     }
     .content {
@@ -77,13 +77,11 @@
             color: #f1f1f1;
             background-color: transparent;
             border: 1px solid #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
             &.favorited {
-                background-color: #f00;
-                color: #444;
-                border: 1px solid #f00;
+                background-color: #7f7;
+                border: 1px solid #7f7;
+                line-height: 1.5;
+                color: #222;
             }
             &:focus {
                 outline: 0;

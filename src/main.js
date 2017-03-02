@@ -6,7 +6,7 @@ import FetchData from 'vue-fetch-data'
 
 Vue.use(FetchData)
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false 
 
 /* eslint-disable no-new */
 new Vue({
