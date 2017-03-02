@@ -1,4 +1,4 @@
-.filmCard {
+.film-card {
     transition: 0.5s ease;
     display: flex;
     background-color: #cff;
@@ -9,23 +9,7 @@
     overflow: hidden;
     height: 170px;
     background-color: lighten(#000, 1%);
-    &:hover {
-        filter: brightness(90%) !important;
-        transform: translate3d(20px, 0, 0) scale(1.2);
-        &~.filmCard {
-            transform: translate3d(38px, 0, 0);
-            img {
-                filter: brightness(40%);
-            }
-        }
-    }
-    &:hover>.content {
-        opacity: 1;
-    }
-    &:hover>img {
-        transform: scale(1.2);
-    }
-    img {
+    &__image {
         transition: 0.75s;
         display: block;
         filter: brightness(60%);
@@ -46,7 +30,7 @@
         padding: 0 10px;
         opacity: 0;
         text-shadow: 0 0 5px #000;
-        h3 {
+        &__show-name {
             margin: 5px 0;
             font-weight: 100;
             font-size: 1.3em;
@@ -54,7 +38,7 @@
                 font-size: 1.1em;
             }
         }
-        .show-desc {
+        &__show-desc {
             display: flex;
             flex-direction: column;
             text-align: left;
@@ -64,7 +48,7 @@
                 font-size: 0.8em;
             }
         }
-        button {
+        &__favorite-button {
             position: relative;
             top: 8%;
             right: 8%;
@@ -88,5 +72,22 @@
                 outline: 0;
             }
         }
+    }
+    &:hover {
+        filter: brightness(90%) !important;
+        z-index: 33;
+        transform: translate3d(20px, 0, 0) scale(1.2);
+        &~.film-card {
+            transform: translate3d(38px, 0, 0);
+            img {
+                filter: brightness(40%);
+            }
+        }
+    }
+    &:hover>.content {
+        opacity: 1;
+    }
+    &:hover>img {
+        transform: scale(1.2);
     }
 }

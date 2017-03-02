@@ -1,7 +1,7 @@
 <template>
  <div class="category" >
      <h1> {{ title }} </h1>
-     <div class="show-list">
+     <div class="category__show-list">
         <FilmCard 
         class="film-card"
         v-for="movie in category_data.value.results.slice(0,6)" 

@@ -1,21 +1,21 @@
 <template>
 
-    <div class="filmCard">
+    <div class="film-card">
 
-    <img :src="getImageUrl(show.backdrop_path)" :alt="show.original_title"> 
+    <img class="film-card__image" :src="getImageUrl(show.backdrop_path)" :alt="show.original_title"> 
 
 
 
     <span class="content">
-            <button v-on:click="toggleFavorited" :class="{ favorited: isFavorited }">
+            <button v-on:click="toggleFavorited" class="content__favorite-button" :class="{ favorited: isFavorited }" >
 
                 <span v-if="isFavorited"> - </span>
                 <span v-else> + </span>
 
             </button>
 
-            <span class="show-desc">
-                <h3 :class="{ smaller: show.original_title.length > 20 }"> {{ show.original_title }} </h3>
+            <span class="content__show-desc">
+                <h3 class="content__show-name" :class="{ smaller: show.original_title.length > 20 }"> {{ show.original_title }} </h3>
                 <p> {{ show.vote_average }}/10 </p>
                 <p> {{ show.overview.length > 80 ? (show.overview.slice(0,80) + "...") : show.overview }} </p>
             </span>
