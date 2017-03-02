@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <Navbar user="seth"></Navbar>
     <Header></Header>
 
     <div class="categories">
@@ -19,12 +20,14 @@
 <script>
     import Header from './components/Header'
     import Category from './components/Category'
+    import Navbar from './components/Navbar'
 
     export default {
         name: 'app',
         components: {
             Header,
-            Category
+            Category,
+            Navbar
         }
     }
 </script>
