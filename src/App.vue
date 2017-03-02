@@ -1,19 +1,21 @@
 <template>
   <div id="app">
-    <Navbar user="seth"></Navbar>
-    <Header></Header>
+    <Navbar user="seth" />
 
-    <div class="categories">
+    <Header/>
 
-      <Category title="Trending" api-options=""></Category>
+    <section class="categories">
 
-      <Category title="Action Films" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28"></Category>
+      <Category title="Trending" api-options="" />
 
-      <Category title="Comedies" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=35"></Category>
+      <Category title="Action Films" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=28" />
 
-      <Category title="Animated Films" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=16"></Category>
+      <Category title="Comedies" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=35" />
+
+      <Category title="Animated Films" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=16" />
     
-    </div>
+    </section>
+
   </div>
 </template>
 
