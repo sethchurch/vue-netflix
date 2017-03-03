@@ -1,18 +1,36 @@
 .category {
     width: 100%;
     text-align: left;
+    margin-bottom: 2em;
     h1 {
         font-weight: 500;
         margin-left: 3vw;
         margin-bottom: 5px;
         color: #ccc;
     }
+    .show-container {
+        height: 250px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        transition: 0.5s ease;
+        &__control {
+            height: 210px;
+            margin-bottom: 5px;
+            background-color: lighten(#000, 2%);
+            width: 350px;
+        }
+    }
     &__show-list {
-        width: 100%;
         transition: 0.5s ease;
         display: flex;
         justify-content: space-around;
-        margin-bottom: 1em;
+        overflow-x: scroll;
+        padding: 500px;
+    }
+    .transform-wrapper {
+        transition: 0.5s ease;
+        display: flex;
         &:hover {
             transform: translate3d(-20px, 0, 0);
             .film-card {

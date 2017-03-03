@@ -1,14 +1,24 @@
 <template>
  <div class="category" >
      <h1> {{ title }} </h1>
-     <div class="category__show-list">
-        <FilmCard 
-        class="film-card"
-        v-for="movie in category_data.value.results.slice(0,6)" 
-        :show="movie"
-        :key="movie.id"
-        ></FilmCard>
-     </div>
+     <section class="show-container">
+
+        <span v-on:mouseenter="scrollRight" v-on:click="scrollRight"  class="show-container__control" />
+
+        <div id="scroller-list" class="category__show-list">
+            <div class="transform-wrapper">
+                <FilmCard 
+                class="film-card"
+                v-for="movie in category_data.value.results" 
+                :show="movie"
+                :key="movie.id"
+                />
+            </div>
+        </div>
+
+        <span v-on:mouseenter="scrollLeft" v-on:click="scrollLeft" class="show-container__control" />
+
+     </section>
  </div>
 </template>
 
@@ -24,6 +34,14 @@
         data() {
             return {
                 category_data: {}
+            }
+        },
+        methods: {
+            scrollLeft(e) {
+                document.querySelector("#scroller-list").scrollLeft += 50;
+            },
+            scrollRight(e) {
+                document.querySelector("#scroller-list").scrollLeft -= 50;
             }
         },
         fetch: {
