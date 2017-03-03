@@ -3,9 +3,9 @@
      <h1> {{ title }} </h1>
      <section class="show-container">
 
-        <span v-on:mouseenter="scrollRight" v-on:click="scrollRight"  class="show-container__control" />
+        <span v-on:mouseenter="scrollLeft(-1)" v-on:mouseleave="clearScroll"  class="show-container__control" />
 
-        <div id="scroller-list" class="category__show-list">
+        <div ref="scroller" class="category__show-list">
             <div class="transform-wrapper">
                 <FilmCard 
                 class="film-card"
@@ -16,7 +16,7 @@
             </div>
         </div>
 
-        <span v-on:mouseenter="scrollLeft" v-on:click="scrollLeft" class="show-container__control" />
+        <span v-on:mouseenter="scrollLeft(1)" v-on:mouseleave="clearScroll" class="show-container__control" />
 
      </section>
  </div>
@@ -37,11 +37,11 @@
             }
         },
         methods: {
-            scrollLeft(e) {
-                document.querySelector("#scroller-list").scrollLeft += 50;
+            scrollLeft(amount) {
+                this.scroll = setInterval(() => this.$refs.scroller.scrollLeft += amount, 5)
             },
-            scrollRight(e) {
-                document.querySelector("#scroller-list").scrollLeft -= 50;
+            clearScroll() {
+                clearInterval(this.scroll);
             }
         },
         fetch: {
