@@ -14,6 +14,7 @@
 
       <Category title="Animated Films" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=16" />
     
+      <Category title="Science Fiction Films" api-options="language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1&with_genres=878" />
     </section>
 
   </div>
