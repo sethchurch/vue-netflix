@@ -7,9 +7,9 @@
 
         <div ref="scroller" class="category__show-list">
             <div class="transform-wrapper">
-                <FilmCard 
+                <FilmCard
                 class="film-card"
-                v-for="movie in category_data.value.results" 
+                v-for="movie in category_data.value.results"
                 :show="movie"
                 :key="movie.id"
                 />
@@ -23,7 +23,7 @@
 </template>
 
 <script>
-    import FilmCard from './filmCard';
+    import FilmCard from './FilmCard';
 
     export default {
         name: 'category',
