@@ -46,7 +46,7 @@
         },
         fetch: {
             category_data: vue => {
-                return "https://api.themoviedb.org/3/discover/movie?api_key=cbd6aed8ebb901c0305b2e761eb59974&" + vue.apiOptions || ""
+                return "https://api.themoviedb.org/3/discover/movie?api_key=API_KEY&" + vue.apiOptions || ""
             }
         }
     }
